@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://unpkg.com/tailwindcss@3.4.11/src/css/preflight.css");
+
+body {
+  font-family: "Inter", system-ui;
+  font-size: 12px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+}
+h1 {
+  font-size: 32px;
+}
+h2 {
+  font-size: 24px;
+}
+h3 {
+  font-size: 16px;
+}
+
+a {
+  color: rgb(191, 64, 64);
+  text-decoration: underline;
+}
+
+input {
+  border-radius: 9999px;
+  padding: 8px 16px;
+  background-color: hsl(0, 0%, 15%);
+}
+
+.container {
+  max-width: 1024px;
+  margin: 0px auto;
+  padding: 0px 16px;
+}
+
+button,
+a.button {
+  max-width: fit-content;
+  display: inline-flex;
+  gap: 8px;
+  border-radius: 9999px;
+  padding: 8px 16px;
+  align-items: center;
+  text-decoration: none;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  background-color: rgb(191, 64, 64);
+}
+a.button:hover {
+  color: rgb(191, 64, 64);
+  background-color: rgb(255, 255, 255);
+}
+label {
+  font-weight: 700;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  padding: 8px;
+  background-color: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(16px);
+  z-index: 2;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav ul {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+header nav a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+header nav a.active {
+  color: rgb(191, 64, 64);
+}
+header nav a:hover {
+  color: rgb(191, 64, 64);
+}
+@media (max-width: 1024px) {
+  header .container {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+section.banner {
+  overflow: hidden;
+  background-color: rgb(191, 64, 64);
+}
+section.banner .container {
+  position: relative;
+}
+section.banner img {
+  position: absolute;
+  right: 0;
+  transform: rotate(15deg);
+  bottom: -80px;
+  width: 300px;
+}
+section.banner a.button {
+  margin-bottom: 16px;
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+}
+section.banner a.button:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
+}
+section.banner h1 {
+  font-size: 64px;
+  text-transform: uppercase;
+}
+section.banner a.button {
+  z-index: 1;
+}
+
+section.bestsellers {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+section.bestsellers ul {
+  overflow-x: scroll;
+  display: flex;
+  gap: 32px;
+  padding-bottom: 16px;
+  scrollbar-color: #ffffff transparent;
+}
+section.bestsellers ul li {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 256px;
+}
+section.bestsellers img {
+  border-radius: 16px;
+}
+section.bestsellers a.button {
+  align-self: flex-end;
+}
+@media (max-width: 1024px) {
+  section.bestsellers a.button {
+    align-self: center;
+  }
+}
+
+main.shoes ul {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 16px;
+}
+main.shoes ul li {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+main.shoes img {
+  border-radius: 16px;
+}
+
+main.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: hsl(0, 0%, 10%);
+  border-radius: 16px;
+  padding: 16px;
+}
+
+form.order {
+  display: flex;
+  flex-direction: column;
+  max-width: 512px;
+  gap: 16px;
+}
+@media (max-width: 500px) {
+  main.shoes ul {
+    grid-template-columns: 1fr;
+  }
+}
+
+section.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  margin-bottom: 16px;
+  max-width: 100%;
+}
+section.gallery img:first-child {
+  height: 100%;
+  object-fit: cover;
+  grid-row: span 2;
+}
+
+footer {
+  padding: 16px 0;
+  background: hsl(0, 50%, 50%);
+}
+
+footer nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
