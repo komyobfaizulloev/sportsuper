@@ -113,6 +113,8 @@ section.banner img {
   width: 300px;
 }
 section.banner a.button {
+  position: relative;
+  z-index: 2;
   margin-bottom: 16px;
   color: rgb(0, 0, 0);
   background-color: rgb(255, 255, 255);
@@ -124,10 +126,6 @@ section.banner a.button:hover {
 section.banner h1 {
   font-size: 64px;
   text-transform: uppercase;
-}
-section.banner a.button {
-  position: relative;
-  z-index: 2;
 }
 
 section.bestsellers {
