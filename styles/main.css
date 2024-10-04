@@ -68,7 +68,7 @@ header {
   padding: 8px;
   background-color: rgba(0, 0, 0, 0.75);
   backdrop-filter: blur(16px);
-  z-index: 2;
+  z-index: 3;
 }
 header .container {
   display: flex;
